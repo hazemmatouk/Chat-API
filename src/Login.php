@@ -47,6 +47,7 @@ class Login
           $this->parent->reader->setKey($this->inputKey);
           $this->parent->writer->setKey($this->outputKey);
           while (!$this->parent->pollMessage()) {
+              usleep(10);
           };
       }
 
